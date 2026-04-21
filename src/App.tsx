@@ -74,8 +74,9 @@ export default function App() {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: { 'image/*': [] },
-    maxFiles: 1
-  });
+    maxFiles: 1,
+    multiple: false
+  } as any);
 
   const removeImage = (e: React.MouseEvent) => {
     e.stopPropagation();
